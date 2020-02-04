@@ -1,0 +1,14 @@
+class Prime{
+    public void checkPrime(int ...num){
+        int i = 0;
+        for(int f : num){
+            for( i =2 ;i <= f/2;i++){
+                if(f%i == 0)
+                    break;
+            }
+            if(i == f/2)
+                System.out.println(f);
+        }
+        System.out.println();
+    }
+}

@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.util.*;
+public class Mine implements Cloneable{
+    
+    public static final strictfp synchronized void main(String ...args){
+     	Scanner sc = new Scanner(System.in);
+     	
+	Map<String,Integer> m = new HashMap<String,Integer>();
+	m.put("JANUARY",31);
+	m.put("FEBRURARY",28);
+	m.put("MARCH",31);
+	m.put("APRIL",30);
+	m.put("MAY",31);
+	m.put("JUNE",30);
+	m.put("JULY",31);
+	m.put("AUGUST",31);
+	m.put("SEPTEMBER",30);
+	m.put("OCTOBER",31);
+	m.put("NOVEMBER",30);
+	m.put("DECEMBER",31);
+	
+	Map<String,Integer> m1 = new HashMap<String,Integer>();
+	m1.put("FEBRURARY",29);
+	
+	int days = 0;
+	System.out.println("Enter a year and month");
+	int year = 2016;
+	String month = "December";
+	String ma = month.toUpperCase();
+	
+	if(ma.equals("FEBRURARY")){
+	    if(year%4 == 0 || year%400 == 0 && year%100 != 0) 
+		    days = m1.get(month.toUpperCase());
+	
+	    else
+		days = m.get(month.toUpperCase());
+
+	}
+    else{
+		days = m.get(ma);
+    }
+    System.out.println(days);	
+    }
+
+    
+}

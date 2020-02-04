@@ -1,0 +1,38 @@
+//Find the subset having maximal values and any 2 numbers of that subset should not be divisible by k
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("Hellaso World");
+        int  k = 7;
+        int S[] = {278,576,496,727,410,124,338,149,209,702,282,718,771,575,436};
+        List<Integer> ls = new ArrayList<Integer>();
+        Arrays.sort(S);
+        int count = 0;
+        ls.add(S[S.length-1]);
+        for(int i =S.length-2;i >= 0;i--){
+            for(int j = 0;j < ls.size();j++){
+                System.out.println(S[i]+" "+ls.get(j));
+                if((ls.get(j)+S[i])%k != 0 ){
+                    count++;
+                }
+                // else{
+                //     if(ls.get(j) < S[i])
+                //     ls.set(j,s[i]);
+                //     break;
+                // }
+            }
+            if(count == ls.size()){
+                ls.add(S[i]);
+                   System.out.println("Element added is "+S[i]);
+                System.out.println(ls.size());
+                count = 0;
+            }    
+            else
+                count = 0;    
+        }
+        System.out.println(ls.size());
+        System.out.println(ls);
+     }
+}

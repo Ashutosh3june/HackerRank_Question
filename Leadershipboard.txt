@@ -1,0 +1,39 @@
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        int scores[] = {100,100,50,40,40,20,10};
+        int alice[] = {5,25,50,120};
+        List<Integer> ls = new ArrayList<Integer>();
+        int i,j;
+        for(i = 0;i < scores.length;i++){
+            ls.add(scores[i]);
+        }
+        int count[] = new int[alice.length];
+        int name[] = new int[alice.length];
+        for(i = 0;i < alice.length;i++){
+
+            for(j = 0;j < scores.length;j++){
+                if(alice[i] > scores[j]){
+                    count[i] = j;
+                    name[i] = alice[i];
+                    break;
+                }
+                else
+                    count[i] = scores.length;
+                    name[i] = alice[i];
+            }
+            
+        }
+        for(i = 0;i < count.length;i++){
+            // if(i == 0)
+                ls.add(count[i],name[i]);
+            // else{
+                // count[i] += 1;
+                // ls.add(count[i],name[i]);
+            // }
+        }
+        System.out.println(ls);
+     }
+}

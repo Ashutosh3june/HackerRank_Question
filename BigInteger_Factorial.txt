@@ -1,0 +1,15 @@
+int m = 1;
+        BigInteger sum;
+        sum = BigInteger.valueOf(1);
+        BigInteger N;
+        N = BigInteger.valueOf(n);
+        BigInteger I;
+        I = BigInteger.valueOf(n);
+        BigInteger L;
+        L = BigInteger.valueOf(1);
+        
+        while(!(I.compareTo(L) == 0)){
+            sum = sum.multiply(I);
+            I = I.subtract(L);
+        }
+        System.out.println(sum);

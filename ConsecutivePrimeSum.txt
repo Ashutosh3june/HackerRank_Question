@@ -1,0 +1,55 @@
+import java.util.*;
+public class Mine{
+    public static void main(String args[]){
+        int range = 50;
+        int sum = 0;
+        int i,j,num,flag = 0;
+        List<Integer> ls = new ArrayList<Integer>();
+        List<Integer> ls1 = new ArrayList<Integer>();
+        
+		//First of all find prime numbers under 100 range
+		
+		
+		
+		for( i = 2;i <= 100;i++){
+            flag = 0;
+            for(j = 2;j <= i/2;j++){
+                if(i%j == 0){
+                    flag++;
+                    break;
+                }
+            }
+            if(flag == 0 )
+                ls.add(i); 
+        }
+        System.out.println(ls);
+        
+		//Now check whose prime sum is also a prime number
+		
+		for(i = 0;i < range;i++){
+            num = ls.get(i);
+            if(num > range)
+                break;
+            abc:
+            for(j = 0;j < range;j++){
+                sum += ls.get(j);
+                //if num itself is the first one like 2 then 2+0 = 2 and it will be considered and we dot want it
+                
+                    if(sum == num){
+                        ls1.add(num);
+                        sum = 0;
+                        break abc;
+                    }
+                
+                    else if(sum > num){
+                      
+                        sum = 0;
+                          break abc;
+                    }
+            }
+        }
+        ls1.remove(0);
+        System.out.println(ls1);
+        
+    }
+}

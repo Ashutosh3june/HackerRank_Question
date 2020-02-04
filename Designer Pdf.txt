@@ -1,0 +1,33 @@
+Problem name:Designer PDF
+
+//You will be given weight of all 26 small alphabets and also a  string of small alphabets then you have to find the max weigthed aplhabet from that string and multiply it to the length of the string
+
+import java.util.*;
+public class MyClass {
+  
+        int h[] = {1,3,1,3,1,4,1,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7};
+        HashMap<Character,Integer> hm = new HashMap<Character,Integer>();
+   
+        int k = 0;
+        int i = 0;
+        for(i = 97;i <= 122;i++){
+                hm.put((char)i,h[k]);
+                k++;
+        }
+        System.out.println(hm);
+ 
+        
+        String str = "zaba";
+        int arr[] = new int[str.length()];       
+     for(i = 0;i < str.length();i++){
+        arr[i] = hm.get(str.charAt(i));
+     }
+     Arrays.sort(arr);
+     for(i = 0;i < str.length();i++){
+        System.out.println(arr[i]);
+     }
+     
+     System.out.println(arr[arr.length-1]*str.length());
+         
+    }
+}

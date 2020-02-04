@@ -1,0 +1,18 @@
+for(i = 0;i < a.length;i++){
+		      //  for(j = 0;j < b.length;j++){
+		            abc:
+		            for(k = a[i];k < b[i];k++){
+                        if(a[i] >= s[i]){
+                            for(j = 0;j < c.length;j++){
+                                if(c[i] >= r[i] ){
+                                    for(l = c[j];l < d[j];l++){
+                                        if(a[k] == c[l])
+                                            eaten++;
+                                        else
+                                            continue abc;
+                                    }
+                                }
+                            }
+                        }		                
+		            }
+		    }

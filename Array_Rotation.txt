@@ -1,0 +1,40 @@
+																	//Rotate an array by d elements
+																	
+//Example:  array = 1,2,3,4,5,6,7,8,9 
+//Rotate array by 2 elements
+//Resultant array = 3,4,5,6,7,8,9,1,2
+
+import java.util.*;
+public class Mine{
+    
+    public static void main(String args[]){
+        int arr[] = {1,2,3,4,5,6,7,8,9};
+        int i;
+        int d = 4;
+        int j = d-1;
+        int num[] = new int[d];
+        for(i = 0;i < d;i++){
+               num[i] = arr[i];
+        }
+        
+        
+            for(i = d;i < arr.length;i++){
+                arr[i-d] = arr[i];
+           
+            }
+        
+        for(i = 0;i <arr.length;i++){
+            System.out.println(arr[i]);
+        }
+        for(i =arr.length-1 ;i > arr.length-(d+1);i-- ){
+            arr[i] = num[j];
+            j--;
+        }
+        System.out.println();
+        System.out.println();
+        for(i = 0;i <arr.length;i++){
+            System.out.println(arr[i]);
+        }
+        
+    }
+}

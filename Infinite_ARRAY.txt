@@ -1,0 +1,36 @@
+public class MyClass {
+    public static void main(String args[]) {
+        int A[] ={4,1,5};
+        int L[] = {1,3,9};
+        int R[] = {4,7,10};
+        long value = 0;
+        int arr[] = new int[50];
+        int k = 0;
+        int l = 0;
+        for(int j = 0;j < arr.length/A.length;j++){
+        for(int i = l;i < A.length;i++){
+            // for(int j = 0;j < )
+            arr[k] = A[i];
+            k++;
+            if( i == A.length){
+                l = 0;
+                break;
+                
+                
+            }
+            
+        }}
+        for(int i = 0;i < arr.length;i++){
+            System.out.println(arr[i]);
+        }
+        long total[] = new long[L.length];
+        for(int i = 0;i < L.length;i++){
+            for(int j = (int)L[i]-1;j < (int)R[i];j++){
+                value += (long)arr[j];
+                
+            }
+            total[i] = value;
+            
+        }
+    }
+}

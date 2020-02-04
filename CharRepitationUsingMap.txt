@@ -1,0 +1,28 @@
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        String str = "DBADBC";
+        int count = 0;
+        Map<Character,Integer> m = new HashMap<Character,Integer>();
+        for(int i = 0;i < str.length();i++){
+            if(m.containsKey(str.charAt(i))){
+                count = m.get(str.charAt(i));
+                m.put(str.charAt(i),++count);
+            }
+            else{
+                m.put(str.charAt(i),1);
+            }
+        }
+        System.out.println(m);
+        // for(int j = 0; j < HashMap.size();j++){
+        //     if(m.get(j) > 2)
+        //         System.out.println(m.getKey(j));    
+        
+        //     else
+        //         System.out.println("Frequency 1");
+        // }
+        
+     }
+}
